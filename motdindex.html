@@ -6,7 +6,8 @@
         <style type="text/css">
             body{
                 margin: 0px; 
-                background-color: rgb(102, 118, 133)
+                background-color: rgb(102, 118, 133);
+                color: aliceblue;
             }
             header{
                 width: 100%; 
@@ -39,5 +40,21 @@
                     document.write( decodeURI(token2[0]) ); 
             </script></h1>
         </header>
+
+        <script>
+            var url = location.href; 
+            token = url.split("&"); 
+            if (token[1] != null){
+                var barToken = token[1].split("|"); 
+                document.write("<h3 style='margin-left: 10px;'>서버 규칙</h3>")
+                for(var i = 0; i < barToken.length;i++){
+                    document.write("&nbsp&nbsp&nbsp")
+                    //document.write("<p>"); 
+                    document.write(barToken[i]); 
+                    document.write("<br/>");
+                    //document.write("</p>"); 
+                }
+            }
+        </script>
     </body>
 </html>
