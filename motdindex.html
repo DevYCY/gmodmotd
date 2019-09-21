@@ -50,7 +50,7 @@
                 for(var i = 0; i < barToken.length;i++){
                     document.write("&nbsp&nbsp&nbsp")
                     //document.write("<p>"); 
-                    document.write(barToken[i]); 
+                    document.write(decodeURI(barToken[i])); 
                     document.write("<br/>");
                     //document.write("</p>"); 
                 }
