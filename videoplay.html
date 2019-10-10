@@ -4,6 +4,13 @@
     <head>
         <script type="text/javascript">
             function onLoad(){
+                var locurl = window.href;
+
+                if( locurl == null ){ return; }
+                
+                var token = locurl.Split("?");
+                alert( token[1] ); 
+
                 var vply = document.getElementById("VideoPlayer"); 
                 vply.src = "https://www.youtube.com/embed/tych3_CA4r8"
             }
