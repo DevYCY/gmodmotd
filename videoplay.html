@@ -2,23 +2,21 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <script type="text/javascript">
-            function onLoad(){
-                var locurl = location.href;
-
-                console.log( locurl ); 
-
-                if( locurl == null ){ return; }
-                
-                var token = locurl.Split("?");
-                console.log( token );
-
-                var vply = document.getElementById("VideoPlayer"); 
-                vply.src = "https://www.youtube.com/embed/tych3_CA4r8"
-            }
-        </script>
     </head> 
-    <body onload="onLoad()" >
+    <body>
+        <script>
+            var locurl = location.href;
+
+            console.log( locurl ); 
+
+            if( locurl == null ){ return; }
+
+            var token = locurl.Split("?");
+            console.log( token );
+
+            var vply = document.getElementById("VideoPlayer"); 
+            vply.src = "https://www.youtube.com/embed/tych3_CA4r8"
+        </script>
         <iframe id="VideoPlayer" width="1351" height="534" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </body>
 </html> 
