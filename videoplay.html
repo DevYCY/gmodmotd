@@ -4,9 +4,11 @@
     <head>
         <script>
             function onLoad(){
-                console.log("RR = " + window.location.href ); 
+                var url = window.location.href; 
+                var token = url.split("?"); 
+
                 var vply = document.getElementById("VideoPlayer"); 
-                vply.src = "https://www.youtube.com/embed/tych3_CA4r8";
+                vply.src = "https://www.youtube.com/embed/" + token[1];
             }
         </script>
     </head> 
