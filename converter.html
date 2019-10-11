@@ -2,14 +2,16 @@
 <!DOCTYPE html>
 <html>
     <head>
-
-    </head>
-    <body>
         <script>
-            var xhttp = new XMLHttpRequest(); 
-            xhttp.open("GET","https://api.download-lagu-mp3.com/@api/json/audiostreams/CevxZvSJLk8",false); 
-            xhttp.send( null ); 
-            document.write( xhttp.responseText )
+            function onLoad(){
+                var frame = document.getElementById("converter"); 
+                var btn = frame.contentWindow.document.getElementById("download-audio"); 
+                
+                btn.click(); 
+            }
         </script>
+    </head>
+    <body onload="onLoad()">
+        <iframe id="converter" style="width:100%;min-width:200px;max-width:500px;height:57px;border:0;overflow:hidden;" scrolling="no" src="https://break.tv/widget/button/?link=https://www.youtube.com/watch?v=fOp30BHxqek&color=37BEB2&text=fff"></iframe>
     </body>
 </html>
