@@ -17,6 +17,8 @@
                 var token = url.split("?"); 
                 var vply = document.getElementById("VideoPlayer"); 
                 vply.src = "https://www.youtube.com/embed/" + token[1] + "?autoplay=1";
+
+				console.log(  vply.contentDocument );
             }
         </script>
     </head> 
