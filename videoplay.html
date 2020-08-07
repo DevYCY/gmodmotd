@@ -11,18 +11,20 @@
 			height: 100%;
 		}
 	</style>
+		<script src="https://code.jquery.com/jquery-2.2.1.js"></script>
         <script>
             function onLoad(){
                 var url = window.location.href; 
                 var token = url.split("?"); 
                 var vply = document.getElementById("VideoPlayer"); 
                 vply.src = "https://www.youtube.com/embed/" + token[1] + "?autoplay=1";
-
-				console.log(  vply.contentDocument );
             }
         </script>
     </head> 
     <body onload="onLoad()">
-        <div class="video-container"><iframe id="VideoPlayer" width="1351" height="534" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<div class="video-container"><iframe id="VideoPlayer" width="1351" height="534" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<script>
+			console.log( $('.ytp-time-current').innerHTML ); 
+		</script>
     </body>
 </html> 
