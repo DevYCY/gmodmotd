@@ -20,8 +20,11 @@
                 vply.src = "https://www.youtube.com/embed/" + token[1] + "?autoplay=1";
 
 				setTimeout(function(){
-					vply.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+					$('.ytp-play-button ytp-button').each( function(){
+						console.log( this );
+					})
 				},5000)
+
             }
         </script>
     </head> 
