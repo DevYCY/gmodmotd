@@ -19,7 +19,9 @@
                 var vply = document.getElementById("VideoPlayer"); 
                 vply.src = "https://www.youtube.com/embed/" + token[1] + "?autoplay=1";
 
-				console.log( vply.contentWindow.document );
+				setTimeout(function(){
+					console.log( vply.contentWindow.document );
+				},6000);
 
             }
         </script>
