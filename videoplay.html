@@ -3,17 +3,7 @@
 <html>
     <head>
 	<style>
-		.video-container {
-			position: relative;
-			padding-bottom: 56.25%;
-			padding-top: 30px;
-			height: 0;
-			overflow: hidden;
-		}
- 
-		.video-container iframe,
-		.video-container object,
-		.video-container embed {
+		iframe {
 			position: absolute;
 			top: 0;
 			left: 0;
@@ -31,6 +21,6 @@
         </script>
     </head> 
     <body onload="onLoad()">
-        <div class="video-container"><iframe id="VideoPlayer" width="1351" height="534" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+        <div class="video-container"><iframe id="VideoPlayer" width="1351" height="534" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </body>
 </html> 
