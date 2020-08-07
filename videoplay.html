@@ -26,7 +26,9 @@
 		<script type="text/javascript">
 			function onFrameLoaded(){
 				var vply = document.getElementById('VideoPlayer'); 
-				vply.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*'); 
+				setTimeout( function(){
+					vply.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*'); 
+				},5000);
 			}
 		</script>
     </body>
