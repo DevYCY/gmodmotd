@@ -23,14 +23,16 @@
 				var vply = document.getElementById('VideoPlayer'); 
 				vply.contentWindow.postMessage('{"event":"command","func":"pauseVideo","args":""}', '*'); 
 			}
+			function playVideo(){
+				var vply = document.getElementById('VideoPlayer'); 
+				vply.contentWindow.postMessage('{"event":"command","func":"playVideo","args":""}', '*'); 
+			}
         </script>
     </head> 
     <body onload="onLoad()">
 		<div class="video-container"><iframe id="VideoPlayer" width="1351" height="534" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen onload="onFrameLoaded()"></iframe>
 		<script type="text/javascript">
-			function onFrameLoaded(){
-		
-			}
+
 		</script>
     </body>
 </html> 
