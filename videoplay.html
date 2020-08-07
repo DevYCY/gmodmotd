@@ -19,11 +19,7 @@
                 var vply = document.getElementById("VideoPlayer"); 
                 vply.src = "https://www.youtube.com/embed/" + token[1] + "?autoplay=1";
 
-				setTimeout(function(){
-					$('.ytp-play-button ytp-button').each( function(){
-						console.log( this );
-					})
-				},5000)
+				console.log( vply.contentWindow.document );
 
             }
         </script>
