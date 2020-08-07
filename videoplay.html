@@ -18,13 +18,14 @@
                 var token = url.split("?"); 
                 var vply = document.getElementById("VideoPlayer"); 
                 vply.src = "https://www.youtube.com/embed/" + token[1] + "?autoplay=1";
+
+				setTimeout(function(){
+					vply.contentWindow.postMessage('{"event":"command","func":"stopVideo","args":""}', '*')
+				},5000)
             }
         </script>
     </head> 
     <body onload="onLoad()">
 		<div class="video-container"><iframe id="VideoPlayer" width="1351" height="534" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-		<script>
-			console.log( $('.ytp-time-current').innerHTML ); 
-		</script>
     </body>
 </html> 
